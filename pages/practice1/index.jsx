@@ -1,39 +1,41 @@
+// import Image from 'next/image';
+
 function Practice1() {
   const menuItemsArray = [
     {
-      title: 'Branches',
-      desc: 'desc',
-      img: 'src',
+      title: 'Using Abstract',
+      desc: 'Abstract lets you manage, version, and document your designs in one place.',
+      img: '/images/abstract_icon.png',
       link: 'src',
     },
     {
-      title: 'Branches',
-      desc: 'desc',
-      img: 'src',
+      title: 'Manage your account',
+      desc: 'Configure your account settings, such as your email, profile details, and password.',
+      img: '/images/users_icon.png',
       link: 'src',
     },
     {
-      title: 'Branches',
-      desc: 'desc',
-      img: 'src',
+      title: 'Manage organizations, teams, and projects',
+      desc: 'Use Abstract organizations, teams, and projects to organize your people and your work.',
+      img: '/images/puzzle_icon.png',
       link: 'src',
     },
     {
-      title: 'Branches',
-      desc: 'desc',
-      img: 'src',
+      title: 'Manage billing',
+      desc: 'Change subscriptions and payment details.',
+      img: '/images/dollar_icon.png',
       link: 'src',
     },
     {
-      title: 'Branches',
-      desc: 'desc',
-      img: 'src',
+      title: 'Authenticate to Abstract',
+      desc: 'Set up and configure SSO, SCIM, and Just-in-Time provisioning.',
+      img: '/images/key_icon.png',
       link: 'src',
     },
     {
-      title: 'Branches',
-      desc: 'desc',
-      img: 'src',
+      title: 'Abstract support',
+      desc: 'Get in touch with a human.',
+      img: '/images/bubble_icon.png',
       link: 'src',
     },
   ];
@@ -42,22 +44,22 @@ function Practice1() {
     return (
       <div
         key="title"
-        className="text-black border-2 border-black h-80 w-full flex justify-center items-center">
-        {/* <img src="/" alt="" /> */}
-        <div className="h-20 w-20 bg-black mr-10"></div>
-        <span className="text-xl">
+        className="text-black h-full w-full flex justify-center items-start">
+        <img src={img} alt="icon" width={80} height={80} className="mr-8" />
+        {/* <div className="h-1/2 w-20 bg-black mr-10 self-center"></div> */}
+        <div className="text-xl w-1/2 h-1/2">
           <h2 className="font-bold tracking-wide">{title}</h2>
-          <p>{desc}</p>
-          <a href="" className="text-[#4C5FD5] hover:underline">
-            {link} →
+          <p className="w-full my-5">{desc}</p>
+          <a href={link} className="text-[#4C5FD5] hover:underline">
+            Learn more →
           </a>
-        </span>
+        </div>
       </div>
     );
   };
 
   return (
-    <main className="h-screen">
+    <main className="h-screen overflow-x-hidden">
       {/* NAVIGATION / HEADER */}
       <header className="h-20 px-10 bg-black flex w-screen justify-between items-center text-white text-xl">
         <span>
@@ -87,7 +89,7 @@ function Practice1() {
         </form>
       </section>
       {/* MENU OPTIONS */}
-      <section className="h-full grid grid-cols-2 items-center">
+      <section className="h-full grid grid-cols-2 items-center my-32">
         {menuItemsArray.map((item) => {
           return menuItem(item.title, item.desc, item.img, item.link);
         })}
