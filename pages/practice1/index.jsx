@@ -44,13 +44,13 @@ function Practice1() {
     return (
       <div
         key="title"
-        className="text-black h-full w-full flex justify-center items-start">
+        className="text-black h-full w-full flex justify-center items-start ">
         <img src={img} alt="icon" width={80} height={80} className="mr-8" />
         {/* <div className="h-1/2 w-20 bg-black mr-10 self-center"></div> */}
         <div className="text-xl w-1/2 h-1/2">
           <h2 className="font-bold tracking-wide">{title}</h2>
           <p className="w-full my-5">{desc}</p>
-          <a href={link} className="text-[#4C5FD5] hover:underline">
+          <a href={link} className="text-[#4C5FD5] hover:underline text-lg">
             Learn more →
           </a>
         </div>
@@ -95,7 +95,48 @@ function Practice1() {
         })}
       </section>
       {/* FOOTER */}
-      <footer className="bg-black h-1/2"></footer>
+      <footer className="bg-black h-1/2 w-full flex justify-between text-white px-20 py-12">
+        <div className="flex w-2/3 justify-around">
+          <span>
+            <h3 className="font-bold text-2xl mb-5">Abstract</h3>
+            <ul>
+              <li className="hover:underline">
+                <a href="link">Start trial</a>
+              </li>
+              <li className="hover:underline">
+                <a href="link">Pricing</a>
+              </li>
+              <li className="hover:underline">
+                <a href="link">Download</a>
+              </li>
+            </ul>
+          </span>
+          <span>
+            <h3 className="font-bold text-2xl mb-5">Resources</h3>
+            <ul>
+              <li></li>
+            </ul>
+          </span>
+          <span>
+            <h3 className="font-bold text-2xl mb-5">Community</h3>
+            <ul>
+              <li></li>
+            </ul>
+          </span>
+          <span>
+            <h3 className="font-bold text-2xl mb-5">Company</h3>
+            <ul>
+              <li></li>
+            </ul>
+          </span>
+        </div>
+
+        <p className="self-end text-lg">
+          <span className="block">© Copyright 2023</span>
+          <span className="block">Abstract Studio Design, Inc.</span>
+          <span className="block">All rights reserved</span>
+        </p>
+      </footer>
     </main>
   );
 }
