@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import PulseLogo from '../../components/PulseLogo';
 
 const navLink = (linkTitle: string) => {
@@ -60,7 +61,7 @@ function Pulse() {
         </p>
         {/* PRICING PLANS */}
         <section className="mt-20 flex h-full w-full items-center px-10">
-          <div className="h-60 w-1/3 px-14 text-left">
+          <div className="h-fit w-1/3 px-14 text-left">
             <h2 className="text-[--pulse-heading] text-xl mb-5 font-bold">
               These are what we call the Pulse Basics. They’re what every
               customer gets.
@@ -89,7 +90,7 @@ function Pulse() {
               ))}
             </ul>
           </div>
-          <div className="h-fit flex flex-col w-1/3 border border-[#f2f3f3] bg-[--pulse-white]">
+          <div className="h-fit pb-10 flex flex-col w-1/3 border border-[#f2f3f3] bg-[--pulse-white]">
             <span className="w-full h-fit py-5 px-8 text-black mb-8 bg-[--pulse-gray] ">
               Complex business with multiple financial accounts, currencies, or
               auditing needs?
@@ -101,20 +102,32 @@ function Pulse() {
             <button className="bg-[--pulse-button] self-center my-5 hover:scale-105 text-2xl font-bold w-3/5 px-3 py-2">
               Try premium
             </button>
-            <h3 className="mt-10 mb-3 font-bold">Your pulse basics, plus:</h3>
+            <h3 className="mt-10 mb-3 font-bold">Get it all, plus:</h3>
             <ul className="list-disc text-lg px-12 text-left self-center">
-              {pricingListItems.business.map((item) => (
+              {pricingListItems.premium.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
         </section>
         {/* QUOTE */}
-        <q className="mt-32">
-          Pulse is worth every penny because it empowers business owners with
-          critical financial insight and knowledge.
-        </q>
-        <div>SUBVERT MARKETING, INC.</div>
+        <div className="flex flex-col w-2/3 mt-32">
+          <div>
+            <Image
+              alt="subvert icon"
+              width={80}
+              height={80}
+              src="/images/pulse/subvert.png"
+            />
+          </div>
+          <q className="mt-5 text-2xl">
+            Pulse is worth every penny because it empowers business owners with
+            critical financial insight and knowledge.
+          </q>
+          <div className="font-bold text-[--pulse-heading] mt-8">
+            SUBVERT MARKETING, INC.
+          </div>
+        </div>
       </main>
       {/* FAQ SECTION */}
       <section className="bg-[--pulse-white] h-80"></section>
