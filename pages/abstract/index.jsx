@@ -175,3 +175,4 @@ export default Practice1;
 // use sass later
 // better to use div or span as a grid container?
 // next Image didn't work for some reason
+// html semantic tags
