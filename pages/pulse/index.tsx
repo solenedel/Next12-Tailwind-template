@@ -72,24 +72,42 @@ function Pulse() {
             </ul>
           </div>
           <div className="h-fit w-1/3 flex flex-col  border rounded-lg bg-[--pulse-white] border-[--pulse-heading] pb-10">
-            <span className="w-full font-semibold tracking-widest mb-8 bg-[--pulse-heading] text-[--pulse-white]">
+            <span className="w-full font-semibold rounded-t-md tracking-widest mb-8 bg-[--pulse-heading] text-[--pulse-white]">
               RECOMMENDED
             </span>
             <h2 className="text-[--pulse-heading] text-5xl mb-5 px-14 font-bold">
               Small business plan
             </h2>
             <span className="text-[#83858a] text-xl">$59 per month</span>
-            <button className="bg-[--pulse-button] self-center my-5 hover:scale-110 text-2xl font-bold w-3/5 px-3 py-2">
+            <button className="bg-[--pulse-button] self-center my-5 hover:scale-105 text-2xl font-bold w-3/5 px-3 py-2">
               Sign up now
             </button>
-            <h3 className="my-10 font-bold">Your pulse basics, plus:</h3>
+            <h3 className="mt-10 mb-3 font-bold">Your pulse basics, plus:</h3>
             <ul className="list-disc text-lg px-12 text-left self-center">
-              {pricingListItems.basic.map((item) => (
+              {pricingListItems.business.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
-          <div className="h-60 w-1/3 border border-[--pulse-gray]">three</div>
+          <div className="h-fit flex flex-col w-1/3 border border-[#f2f3f3] bg-[--pulse-white]">
+            <span className="w-full h-fit py-5 px-8 text-black mb-8 bg-[--pulse-gray] ">
+              Complex business with multiple financial accounts, currencies, or
+              auditing needs?
+            </span>
+            <h2 className="text-[--pulse-heading] text-4xl mb-5 px-14 font-light">
+              Unlock extra features
+            </h2>
+            <span className="text-[#83858a] text-xl">$89 per month</span>
+            <button className="bg-[--pulse-button] self-center my-5 hover:scale-105 text-2xl font-bold w-3/5 px-3 py-2">
+              Try premium
+            </button>
+            <h3 className="mt-10 mb-3 font-bold">Your pulse basics, plus:</h3>
+            <ul className="list-disc text-lg px-12 text-left self-center">
+              {pricingListItems.business.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </section>
         {/* QUOTE */}
         <q className="mt-32">
