@@ -120,19 +120,21 @@ function Practice1() {
           <button className="border-white border rounded-md p-2 mr-5 ">
             Submit a request
           </button>
-          <button className="bg-[#4C5FD5] py-2 px-3 rounded-md">Sign in</button>
+          <button className="bg-[--secondary-color] py-2 px-3 rounded-md">
+            Sign in
+          </button>
         </span>
       </header>
       {/* SEARCH BAR */}
-      <section className="h-1/2 w-screen bg-[#dadbf1] flex flex-col items-center justify-center">
-        <h1 className="text-black text-5xl mb-10">How can we help?</h1>
-        <form action="submit" className="flex justify-center">
+      <section className="h-1/2 w-screen bg-[--primary-color] flex flex-col items-center justify-center">
+        <h1 className="text-black text-7xl mb-10 ">How can we help?</h1>
+        <form action="submit" className="flex justify-center w-full px-64 ">
           <input
             type="text"
             name="searchBar"
             id="searchBar"
             placeholder="Search"
-            className="border-black border rounded-sm pl-2 py-2 w-96 shadow-lg"
+            className="border-black border rounded-md pl-2 py-5 w-screen shadow-lg"
           />
           <button type="submit" className="text-2xl relative right-8">
             →
@@ -140,7 +142,7 @@ function Practice1() {
         </form>
       </section>
       {/* sticky help button */}
-      <button className="bg-[#4C5FD5] text-white text-xl px-5 font-semibold py-3 rounded-full absolute right-10 bottom-10">
+      <button className="bg-[--secondary-color]] text-white text-xl px-5 font-semibold py-3 rounded-full absolute right-10 bottom-10">
         ? Help
       </button>
       {/* MENU OPTIONS */}
