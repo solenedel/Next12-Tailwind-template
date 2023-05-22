@@ -46,7 +46,6 @@ function Practice1() {
         key="title"
         className="text-black h-full w-full flex justify-center items-start ">
         <img src={img} alt="icon" width={80} height={80} className="mr-8" />
-        {/* <div className="h-1/2 w-20 bg-black mr-10 self-center"></div> */}
         <div className="text-xl w-1/2 h-1/2">
           <h2 className="font-bold tracking-wide">{title}</h2>
           <p className="w-full my-5">{desc}</p>
@@ -55,6 +54,58 @@ function Practice1() {
           </a>
         </div>
       </div>
+    );
+  };
+
+  const footerLinks = [
+    {
+      title: 'Abstract',
+      links: [
+        { linkTitle: 'Start trial', src: 'src' },
+        { linkTitle: 'Pricing', src: 'src' },
+        { linkTitle: 'Download', src: 'src' },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { linkTitle: 'Blog', src: 'src' },
+        { linkTitle: 'Help Center', src: 'src' },
+        { linkTitle: 'Release Notes', src: 'src' },
+        { linkTitle: 'Status', src: 'src' },
+      ],
+    },
+    {
+      title: 'Community',
+      links: [
+        { linkTitle: 'Twitter', src: 'src' },
+        { linkTitle: 'LinkedIn', src: 'src' },
+        { linkTitle: 'Facebook', src: 'src' },
+        { linkTitle: 'Dribbble', src: 'src' },
+        { linkTitle: 'Podcast', src: 'src' },
+      ],
+    },
+    {
+      title: 'Company',
+      links: [
+        { linkTitle: 'About us', src: 'src' },
+        { linkTitle: 'Careers', src: 'src' },
+        { linkTitle: 'Legal', src: 'src' },
+      ],
+    },
+  ];
+  const footerCol = (title, footerLinks) => {
+    return (
+      <span>
+        <h3 className="font-bold text-2xl mb-5">{title}</h3>
+        <ul>
+          {footerLinks.map((item) => (
+            <li key="item.linkTitle" className="hover:underline">
+              <a href={item.src}>{item.linkTitle}</a>
+            </li>
+          ))}
+        </ul>
+      </span>
     );
   };
 
@@ -97,38 +148,10 @@ function Practice1() {
       {/* FOOTER */}
       <footer className="bg-black h-1/2 w-full flex justify-between text-white px-20 py-12">
         <div className="flex w-2/3 justify-around">
-          <span>
-            <h3 className="font-bold text-2xl mb-5">Abstract</h3>
-            <ul>
-              <li className="hover:underline">
-                <a href="link">Start trial</a>
-              </li>
-              <li className="hover:underline">
-                <a href="link">Pricing</a>
-              </li>
-              <li className="hover:underline">
-                <a href="link">Download</a>
-              </li>
-            </ul>
-          </span>
-          <span>
-            <h3 className="font-bold text-2xl mb-5">Resources</h3>
-            <ul>
-              <li></li>
-            </ul>
-          </span>
-          <span>
-            <h3 className="font-bold text-2xl mb-5">Community</h3>
-            <ul>
-              <li></li>
-            </ul>
-          </span>
-          <span>
-            <h3 className="font-bold text-2xl mb-5">Company</h3>
-            <ul>
-              <li></li>
-            </ul>
-          </span>
+          {footerCol('Abstract', footerLinks[0].links)}
+          {footerCol('Abstract', footerLinks[1].links)}
+          {footerCol('Abstract', footerLinks[2].links)}
+          {footerCol('Abstract', footerLinks[3].links)}
         </div>
 
         <p className="self-end text-lg">
