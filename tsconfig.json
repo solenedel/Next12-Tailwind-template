@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/practice1/index.jsx"
+    "pages/abstract/index.jsx"
   ],
   "exclude": ["node_modules"]
 }

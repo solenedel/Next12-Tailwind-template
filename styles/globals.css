@@ -9,6 +9,12 @@
 :root {
   --primary-color: #dadbf1;
   --secondary-color: #4c5fd5;
+  --pulse-bg: #eafaf1;
+  --pulse-heading: #00ad6a;
+  --pulse-button: #1fe374;
+  --pulse-gray: #d6dae5;
+  --pulse-white: #fcfcfc;
+  --pulse-black: #080c16;
 }
 
 /* .textBox {
