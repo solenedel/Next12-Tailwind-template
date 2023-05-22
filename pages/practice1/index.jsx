@@ -1,4 +1,4 @@
-// import Image from 'next/image';
+import Image from 'next/image';
 
 function Practice1() {
   const menuItemsArray = [
@@ -45,8 +45,8 @@ function Practice1() {
       <div
         key="title"
         className="text-black h-full w-full flex justify-center items-start ">
-        <img src={img} alt="icon" width={80} height={80} className="mr-8" />
-        <div className="text-xl w-1/2 h-1/2">
+        <Image alt="icon" src={img} width={80} height={80} />
+        <div className="text-xl w-1/2 h-1/2 ml-8">
           <h2 className="font-bold tracking-wide">{title}</h2>
           <p className="w-full my-5">{desc}</p>
           <a href={link} className="text-[#4C5FD5] hover:underline text-lg">
