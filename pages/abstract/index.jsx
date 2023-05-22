@@ -176,3 +176,6 @@ export default Practice1;
 // better to use div or span as a grid container?
 // next Image didn't work for some reason
 // html semantic tags
+// divs, spans, flexbox etc (inline-flex)
+// css display properties
+// what is a heading,  para, div, span?

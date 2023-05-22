@@ -10,6 +10,27 @@ const navLink = (linkTitle: string) => {
   );
 };
 
+const pricingListItems = {
+  basic: [
+    'Manage cash flow on a daily, weekly, monthly, or yearly basis',
+    'Forecast growth with recurring income or expenses that scale automatically',
+    'Works with any currency',
+    'See Money In and Money Out, categorize transactions, and run helpful reports',
+    'Toggle entries and accounts on and off to game out different scenarios',
+  ],
+  business: [
+    'Manage cash flow across multiple financial accounts',
+    'Invite your investors, book keeper, or management team to see reports or manage cash flow',
+    'Integrate with QuickBooks Online for more accurate cash flow',
+    'Track your actual cash flow alongside your projected cash flow',
+  ],
+  premium: [
+    'Manage cash flow across unlimited financial accounts',
+    'Convert to any currency for localized cash flow reporting and projections',
+    'Attach invoices or contracts to your cash flow entries for accountability and auditing',
+  ],
+};
+
 function Pulse() {
   return (
     <div className="h-screen overflow-y-scroll bg-[--pulse-bg] w-screen border-2 border-black">
@@ -29,7 +50,7 @@ function Pulse() {
         </div>
       </nav>
       {/* MAIN SECTION */}
-      <main className="min-h-screen flex flex-col py-20  text-center text-[--pulse-black] items-center">
+      <main className="min-h-screen flex flex-col py-20 text-center text-[--pulse-black] items-center">
         <h1 className="text-6xl w-2/5 font-bold">
           Try Pulse free for 30 days.
         </h1>
@@ -38,14 +59,40 @@ function Pulse() {
           any plan and try Pulse absolutely free for 30 days.
         </p>
         {/* PRICING PLANS */}
-        <section className="mt-20 flex h-full w-full items-center">
-          <div className="h-60 w-1/3">one</div>
-          <div className="h-96 w-1/3 border rounded-lg border-[--pulse-heading]">
-            two
+        <section className="mt-20 flex h-full w-full items-center px-10">
+          <div className="h-60 w-1/3 px-14 text-left">
+            <h2 className="text-[--pulse-heading] text-xl mb-5 font-bold">
+              These are what we call the Pulse Basics. They’re what every
+              customer gets.
+            </h2>
+            <ul className="list-disc text-lg">
+              {pricingListItems.basic.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="h-fit w-1/3 flex flex-col  border rounded-lg bg-[--pulse-white] border-[--pulse-heading] pb-10">
+            <span className="w-full font-semibold tracking-widest mb-8 bg-[--pulse-heading] text-[--pulse-white]">
+              RECOMMENDED
+            </span>
+            <h2 className="text-[--pulse-heading] text-5xl mb-5 px-14 font-bold">
+              Small business plan
+            </h2>
+            <span className="text-[#83858a] text-xl">$59 per month</span>
+            <button className="bg-[--pulse-button] self-center my-5 hover:scale-110 text-2xl font-bold w-3/5 px-3 py-2">
+              Sign up now
+            </button>
+            <h3 className="my-10 font-bold">Your pulse basics, plus:</h3>
+            <ul className="list-disc text-lg px-12 text-left self-center">
+              {pricingListItems.basic.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
           <div className="h-60 w-1/3 border border-[--pulse-gray]">three</div>
         </section>
-        <q className="mt-20">
+        {/* QUOTE */}
+        <q className="mt-32">
           Pulse is worth every penny because it empowers business owners with
           critical financial insight and knowledge.
         </q>
