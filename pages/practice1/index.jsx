@@ -139,6 +139,10 @@ function Practice1() {
           </button>
         </form>
       </section>
+      {/* sticky help button */}
+      <button className="bg-[#4C5FD5] text-white text-xl px-5 font-semibold py-3 rounded-full absolute right-10 bottom-10">
+        ? Help
+      </button>
       {/* MENU OPTIONS */}
       <section className="h-full grid grid-cols-2 items-center my-32">
         {menuItemsArray.map((item) => {
@@ -168,3 +172,4 @@ export default Practice1;
 
 // use sass later
 // better to use div or span as a grid container?
+// next Image didn't work for some reason
