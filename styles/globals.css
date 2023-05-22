@@ -17,6 +17,6 @@
   --pulse-black: #080c16;
 }
 
-/* .textBox {
-  background-color: ;
-} */
+:root {
+  background-color: --pulse-bg;
+}

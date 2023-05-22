@@ -12,7 +12,7 @@ const navLink = (linkTitle: string) => {
 
 function Pulse() {
   return (
-    <div className="h-screen bg-[--pulse-bg] w-screen">
+    <div className="h-screen overflow-y-scroll bg-[--pulse-bg] w-screen border-2 border-black">
       {/* NAVIGATION */}
       <nav className="flex justify-between px-20 pt-10 items-center">
         <PulseLogo />
@@ -29,7 +29,7 @@ function Pulse() {
         </div>
       </nav>
       {/* MAIN SECTION */}
-      <main className="h-screen flex flex-col pt-20  text-center text-[--pulse-black] items-center">
+      <main className="min-h-screen flex flex-col py-20  text-center text-[--pulse-black] items-center">
         <h1 className="text-6xl w-2/5 font-bold">
           Try Pulse free for 30 days.
         </h1>
@@ -37,11 +37,24 @@ function Pulse() {
           See why Pulse is the best way to monitor your cash flow. Sign up for
           any plan and try Pulse absolutely free for 30 days.
         </p>
+        {/* PRICING PLANS */}
+        <section className="mt-20 flex h-full w-full items-center">
+          <div className="h-60 w-1/3">one</div>
+          <div className="h-96 w-1/3 border rounded-lg border-[--pulse-heading]">
+            two
+          </div>
+          <div className="h-60 w-1/3 border border-[--pulse-gray]">three</div>
+        </section>
+        <q className="mt-20">
+          Pulse is worth every penny because it empowers business owners with
+          critical financial insight and knowledge.
+        </q>
+        <div>SUBVERT MARKETING, INC.</div>
       </main>
       {/* FAQ SECTION */}
-      <section></section>
+      <section className="bg-[--pulse-white] h-80"></section>
       {/* FOOTER */}
-      <footer></footer>
+      <footer className="bg-[--pulse-black] h-80"></footer>
     </div>
   );
 }
